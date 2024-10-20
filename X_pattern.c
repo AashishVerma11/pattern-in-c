@@ -1,21 +1,21 @@
 #include <stdio.h>
 
-int main()
-{
-    int num;
-    scanf("%d", &num);
+int main() {
+    int n;
+    printf("odd number: ");
+    scanf("%d", &n);
     
-    for(int row = 1; row <= num; row++){
-        for(int col = 1; col <= num; col++){
-           if((row == col) || (row + col == num + 1)){
-               printf("*");
-           }
-           else {
-               printf(" ");
-           }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+
+            if (i == j || i + j == n - 1) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
         }
         printf("\n");
     }
-
+    
     return 0;
 }
